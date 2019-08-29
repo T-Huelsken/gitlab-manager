@@ -1,0 +1,8 @@
+{
+  "atom-workspace": {
+    "ctrl-shift-m": "gitlab-manager:browser-create-new-merge-request",
+    "ctrl-shift-h": "gitlab-manager:browser-compare-to-master",
+    "ctrl-shift-o": "gitlab-manager:browser-open-open-issues",
+    "alt-i": "gitlab-manager:toggle-dock"
+  }
+}

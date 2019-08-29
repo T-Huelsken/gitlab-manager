@@ -1,0 +1,169 @@
+.gitlab-icon(@type) {
+    display: inline-block;
+    line-height: 1;
+    font-size: 16px !important;
+    width: 16px !important;
+    height: 16px !important;
+    content: " ";
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: -4px;
+    background-image: url("atom://gitlab-manager/icons/@{type}.svg");
+    margin: 0;
+    padding: 0;
+    fill: #c4c4c4;
+}
+.jobs-icon(@type) {
+    display: inline-block;
+    line-height: 1;
+    font-size: 24px !important;
+    width: 24px !important;
+    height: 24px !important;
+    content: " ";
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: -4px;
+    background-image: url("atom://gitlab-manager/icons/@{type}.svg");
+    margin: 0;
+    padding: 0;
+}
+.icon-close:before {
+    .jobs-icon(close);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-color: #c4c4c4;
+    fill: #c4c4c4;
+    z-index:99;
+}
+
+.gitlab-doc-text:before {
+    .gitlab-icon('doc-text');
+    border-color: #c4c4c4;
+    fill: #c4c4c4;
+    .gitlab-round;
+}
+
+.gitlab-play:before {
+    .gitlab-icon(play);
+    border-color: #c4c4c4;
+    fill: #c4c4c4;
+    .gitlab-round;
+}
+.gitlab-download:before {
+    .gitlab-icon(download);
+    border-color: #c4c4c4;
+    fill: #c4c4c4;
+    .gitlab-round;
+}
+.gitlab-rocket:before {
+    .gitlab-icon(rocket);
+    border-color: #8d7dd1;
+    fill: #c4c4c4;
+    .gitlab-round;
+}
+.gitlab-cancel:before {
+    .gitlab-icon(cancel);
+    border-color: #c4c4c4;
+    fill: #c4c4c4;
+    .gitlab-round;
+}
+.gitlab-retry:before {
+    .gitlab-icon(retry);
+    border-color: #c4c4c4;
+    fill: #c4c4c4;
+    .gitlab-round;
+}
+
+.gitlab-repeat:before {
+    .gitlab-icon(repeat);
+    border-color: #c4c4c4;
+    fill: #c4c4c4;
+    .gitlab-round;
+}
+
+.gitlab-round {
+    border-radius: 100px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.gitlab-created:before {
+    .gitlab-icon(created);
+    border-color: #c4c4c4;
+    fill: #c4c4c4;
+    .gitlab-round;
+}
+
+.gitlab-manual:before {
+    .gitlab-icon(manual);
+    border-color: #000000;
+    fill: #000000;
+    .gitlab-round;
+}
+
+.gitlab-pending:before {
+    .gitlab-icon(pending);
+    border-color: #fc9403;
+    fill: #fc9403;
+    .gitlab-round;
+}
+
+.gitlab-skipped:before {
+    .gitlab-icon(skipped);
+    border-color: #c4c4c4;
+    fill: #c4c4c4;
+    .gitlab-round;
+}
+
+.gitlab-running:before {
+    .gitlab-icon(running);
+    border-color: #418cd8;
+    fill: #418cd8;
+    .gitlab-round;
+}
+
+.gitlab-success:before {
+    .gitlab-icon(success);
+    border-color: #1aaa55;
+    fill: #1aaa55;
+    .gitlab-round;
+}
+
+.gitlab-failed:before {
+    .gitlab-icon(failed);
+    border-color: #db3b21;
+    fill: #db3b21;
+    .gitlab-round;
+}
+
+.gitlab-canceled:before {
+    .gitlab-icon(canceled);
+    border-color: 	#FFA500;
+    fill: #FFA500;
+    .gitlab-round;
+}
+
+.icon-gitlab:before {
+    .gitlab-icon(gitlab);
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.icon-loading:before {
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: inline-block;
+    line-height: 1;
+    font-size: 16px;
+    margin-left: 1px;
+    width: 12px !important;
+    height: 16px;
+}
