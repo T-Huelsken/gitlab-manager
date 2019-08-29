@@ -26,7 +26,10 @@
   "keywords": [
     "ui",
     "gitlab",
-    "git"
+    "git",
+    "pipeline",
+    "merge",
+    "workflow"
   ],
   "license": "MIT",
   "main": "./lib/gitlab-manager",
