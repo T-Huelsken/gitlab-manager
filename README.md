@@ -37,6 +37,7 @@ Furthermore the following hotkeys are implemented:
 - `ctrl-shift-o`: Opens the projects open issues. (opens Browser)
 
 ## Current limitations
+- Gitlab-Manager is incompatible with the plugin gitlab-integration, since gitlab-manager is a fork of it. Therefore you can only have one of them installed and active in atom. A restart after switching them might be required.
 - The projects must be root level elements. It's not possible to add some kind of root repository which contains several gitlab-projects at once.
 - Using multiple projects in one atom window might not always be working 100%. Additionally it's only supported for one gitlab host at once.
 - Gitlab-Manager uses the remote with the name `origin` for retrieving the gitlab host information. Therefore the remote upstream must be set correctly.
