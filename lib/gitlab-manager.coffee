@@ -46,6 +46,11 @@ class GitlabIntegration
       description: 'The folder which you want to download the job artifacts to.  E.g. "C:\\tmp". If not path is set, the currently active\'s pane path will be used.'
       type: 'string'
       default: ''
+    port:
+      title: 'GitLab custom port'
+      description: 'Specify a port for the GitLab hosted server'
+      type: 'string'
+      default: ''
 
   constructor: () ->
     @URI = 'atom://gitlab-manager/lib/gitlab-repository-view.coffee'
@@ -113,6 +118,7 @@ class GitlabIntegration
     log "     - projects:", @projects
     if origin?
       log "     - origin:", origin
+      console.debug(repos)
       url = GitUrlParse(origin)
       log "     - url:", url
       if url?
@@ -127,6 +133,12 @@ class GitlabIntegration
           host = "#{url.resource}:#{url.port}"
         else
           host = url.resource
+
+	  # force the port from config
+          @port = atom.config.get('gitlab-manager.port')
+          if atom.config.get('gitlab-manager.port')
+            host = "#{host}:#{atom.config.get('gitlab-manager.port')}"
+
         @gitlab.watch(host, projectName, repos).then () =>
           if @gitlabRepositoryView? and not @gitlabRepositoryView.getSuccessOnce()
             @gitlabRepositoryView.recreateView()

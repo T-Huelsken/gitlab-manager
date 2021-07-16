@@ -415,7 +415,7 @@ class GitlabStatus
                   when job.status is 'running' then 'running'
                   when job.status is 'skipped' then 'skipped'
                   when job.status is 'failed' and
-                    status is 'success' then 'failed'
+                    status is 'success' then 'success'
                   else status
               , 'success')
           })
