@@ -4,7 +4,7 @@ opn = require 'opn'
 
 class JobsView extends HTMLElement
   init: ->
-    @classList.add('status-bar-gitlab', 'inline-block')
+    @classList.add('status-bar-gitlab-manager', 'inline-block')
     @activate()
     @currentProject = null
     @stages = {}
@@ -164,5 +164,5 @@ class JobsView extends HTMLElement
       })
       @setchild(status)
 
-module.exports = document.registerElement 'status-bar-gitlab',
+module.exports = document.registerElement 'status-bar-gitlab-manager',
   prototype: StatusBarView.prototype, extends: 'div'
