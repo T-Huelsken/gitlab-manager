@@ -12,7 +12,7 @@ class StatusBarView extends HTMLElement
     this.props.onClick()
 
   init: (isBottomViewVisible)->
-    @classList.add('status-bar-gitlab', 'inline-block')
+    @classList.add('status-bar-gitlab-manager', 'inline-block')
     @activate()
     @currentProject = null
     @gitlab = null
@@ -198,5 +198,5 @@ class StatusBarView extends HTMLElement
       })
       @setchild(status)
 
-module.exports = document.registerElement 'status-bar-gitlab',
+module.exports = document.registerElement 'status-bar-gitlab-manager',
   prototype: StatusBarView.prototype, extends: 'div'
